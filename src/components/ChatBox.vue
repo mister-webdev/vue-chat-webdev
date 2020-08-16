@@ -165,6 +165,7 @@ export default {
   }
   .header-user-img {
     width: 30px;
+    height: 30px;
     border-radius: 100px;
   }
   .header-user-name {
