@@ -1,32 +1,58 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
+  <div
+    id="app"
+    class="page-wrapper"
+  >
+    <router-view></router-view>
   </div>
 </template>
 
+<script>
+export default {
+  name: 'App'
+}
+</script>
+
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 16px;
+    color: rgb(77, 77, 77);
+  }
+  .page-wrapper {
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(
+        rgba(231, 231, 231, 0.774),
+        rgb(235, 235, 235)
+      ),
+      url('./assets/wallpaper.jpg');
+    background-size: cover;
+  }
+  a {
+    text-decoration: none;
+  }
+  button {
+    cursor: pointer;
+  }
+  li {
+    list-style: none;
+  }
+  ul {
+    padding: 0;
+    margin: 0;
+  }
+  figure {
+    margin: 0;
+  }
 
-#nav {
-  padding: 30px;
-}
-
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-#nav a.router-link-exact-active {
-  color: #42b983;
-}
+  .fade-enter-active,
+  .fade-leave-active {
+    transition: opacity 0.5s;
+  }
+  .fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+    opacity: 0;
+  }
 </style>
